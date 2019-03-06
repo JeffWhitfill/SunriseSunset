@@ -1,4 +1,4 @@
-export const sunrisesunset = {
+const sunrisesunset = {
     "results":
     {
       "sunrise":"7:27:02 AM",
@@ -15,4 +15,4 @@ export const sunrisesunset = {
      "status":"OK"
   }
 
-    
+export default sunrisesunset;    

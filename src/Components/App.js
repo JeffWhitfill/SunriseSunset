@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
   BrowserRouter,
   Route
@@ -9,6 +9,8 @@ import Header from './Header';
 import SunriseSunset from './SunriseSunset';
 import Weather from './Weather';
 import Geocode from './Geocode';
+import Home from './Home';
+import About from './About';
 
 
 const App = () => (
@@ -17,7 +19,7 @@ const App = () => (
         <Header />
         
         <Route exact path="/" component={Home} />
-        <Route path="/about" render={ () => <About title='About' /> } />
+        <Route path="/about" component={About} />
         <Route path="/SunriseSunset" component={SunriseSunset} />
         <Route path="/Weather" component={Weather} />
         <Route path="/Geocode" component={Geocode} />
