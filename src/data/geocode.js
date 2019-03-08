@@ -1,4 +1,4 @@
-export const geocode = 
+const geocode = 
 {
     "documentation": "https://opencagedata.com/api",
     "licenses": [
@@ -128,3 +128,5 @@ export const geocode =
     },
     "total_results": 1
 }
+
+export default geocode;

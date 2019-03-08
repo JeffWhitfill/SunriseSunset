@@ -1,15 +1,18 @@
 import React from 'react';
 import sunrisesunset from '../data/sunrisesunset';
 
-const SunriseSunset = () => {
+class SunriseSunset extends React.Component {
+    render () {
         return (
-            <li className="suntimes">
+            <div>
                 <h3>Location Sunrise</h3>
-                <p>Your Sunrise is projected for `{sunrisesunset.sunrise}</p>
+                <p>Your Sunrise is projected for {sunrisesunset.results.sunrise}</p>
                 <h3>Location Sunset</h3>
-                <p>Your Sunsety is projected for`{sunrisesunset.sunset}</p>
-            </li>
+                <p>Your Sunset is projected for {sunrisesunset.results.sunset}</p>
+            </div>
         ) 
+    }
+        
     }
 
 export default SunriseSunset;

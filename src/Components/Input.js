@@ -8,19 +8,19 @@ class getInput extends Component {
 }
 
 render() {
-return (
-  <form>
-    <label>
-      Location:
-      <input type="text" value={this.state.location} onChange={this.handleChange} />
-    </label>
-      <br />
-    <label>
-      Date:
-      <input type="date" value={this.state.date} onChange={this.handleChange} />
-    </label>
-    <input type="submit" value="Submit" />
-  </form>
+  return (
+    <form>
+      <label>
+        Location:
+        <input type="text" value={this.state.location} />
+      </label>
+        <br />
+      <label>
+        Date:
+        <input type="date" value={this.state.date} />
+      </label>
+      <input type="submit" value="Submit" />
+    </form>
 );
 }}
 // API calls

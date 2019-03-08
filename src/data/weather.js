@@ -1,4 +1,4 @@
-export const weather =     {
+const weather =     {
     "city":{"id":1851632,"name":"Shuzenji",
     "coord":{"lon":138.933334,"lat":34.966671},
     "country":"JP",
@@ -23,4 +23,5 @@ export const weather =     {
             "dt_txt":"2014-07-23 09:00:00"}
             ]}
         }
-        
+  
+export default weather;  

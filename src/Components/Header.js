@@ -3,12 +3,13 @@ import { NavLink } from 'react-router-dom';
 
 const Header = () => (
   <header>
-    <span className="icn-logo"><i className="material-icons">code</i></span>
+  
     <ul className="main-nav">
       <li><NavLink exact to="/">Home</NavLink></li>
-      <li><NavLink to="/sun times">Sun Times</NavLink></li>
-      <li><NavLink to="/weather">Weather</NavLink></li>
-      <li><NavLink to="/form">Form</NavLink></li>
+      <li><NavLink to="/SunriseSunset">SunriseSunset</NavLink></li>
+      <li><NavLink to="/Weather">Weather</NavLink></li>
+      <li><NavLink to="/Input">Input</NavLink></li>
+      <li><NavLink to="/Geocode">Geocode</NavLink></li>
     </ul>    
   </header>
 );
