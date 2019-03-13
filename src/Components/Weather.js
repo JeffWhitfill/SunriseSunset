@@ -10,11 +10,11 @@ class Weather extends React.Component {
             
                 <div>
                     <h3>Location Temperature</h3>
-                    <p>Your temperature is {Ftemp}</p>
+                    <p>Your temperature is {Ftemp} F.</p>
                     <h3>Location Humidity</h3>
-                    <p>Your humidity is {weather.city.list[0].main.humidity}</p>
+                    <p>Your humidity is {weather.city.list[0].main.humidity}% .</p>
                     <h3>Location Wind</h3>
-                    <p>Your wind speed is {weather.city.list[0].wind.speed}</p>
+                    <p>Your wind speed is {weather.city.list[0].wind.speed}mph .</p>
                 </div>
             ) 
         } 

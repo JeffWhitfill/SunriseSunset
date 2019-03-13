@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
-class getInput extends Component {
-    state={location:"",
+class Input extends Component {
+    state={
+    location:"",
     date:"",
     lng:"",
     lat:""        
@@ -9,20 +10,21 @@ class getInput extends Component {
 
 render() {
   return (
-    <form>
+    <form id="frm1" action="/action_page.php">
       <label>
         Location:
-        <input type="text" value={this.state.location} />
+        <input type="text" name="formlocation" value={this.state.location} />
       </label>
         <br />
       <label>
         Date:
-        <input type="date" value={this.state.date} />
+        <input type="date" name="formdate" value={this.state.date} />
       </label>
       <input type="submit" value="Submit" />
     </form>
 );
 }}
+
 // API calls
 
 //Get Coordinates
@@ -36,4 +38,4 @@ render() {
 
 
 
-export default getInput;
+export default Input;
