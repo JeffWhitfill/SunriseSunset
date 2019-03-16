@@ -3,22 +3,30 @@ import React, { Component } from 'react';
 class Input extends Component {
     state={
     location:"",
-    date:"",
     lng:"",
     lat:""        
 }
 
+updateLocation = event=> {
+  this.setState({location:event.target.value})
+}
+// Get coords from opencage
+onSubmitInput= (event)=> {
+  event.preventDefault()
+  fetch(`https://api.opencagedata.com/geocode/v1/json?q=${this.state.location}&key=40b6726e5f0045a9bcc9c3aca3b2261e`)
+      .then(function (response) {
+          return response.json();
+      })
+      .then(function (data) {
+          console.log(data);
+      });
+}
 render() {
   return (
-    <form id="frm1" action="/action_page.php">
+    <form id="frm1" onSubmit={this.onSubmitInput}>
       <label>
         Location:
-        <input type="text" name="formlocation" value={this.state.location} />
-      </label>
-        <br />
-      <label>
-        Date:
-        <input type="date" name="formdate" value={this.state.date} />
+        <input type="text" name="formlocation" value={this.state.location} onChange={this.updateLocation}  />
       </label>
       <input type="submit" value="Submit" />
     </form>
@@ -32,7 +40,7 @@ render() {
 // Get coords from opencage
 //fetch (`https://api.opencagedata.com/geocode/v1/json?q=${this.state.location}&key=40b6726e5f0045a9bcc9c3aca3b2261e`);
 //Get sunrise-sunset.org times
-//fetch(`https://api.sunrise-sunset.org/json?lat=${this.state.lat}&lng=${this.state.lng}&date=${this.state.date}`);
+//fetch(`https://api.sunrise-sunset.org/json?lat=${this.state.lat}&lng=${this.state.lng}&date=today`);
 //Get weather data at location
 //fetch(`api.openweathermap.org/data/2.5/forecast?lat=${this.state.lat}&lon=${this.state.lng}`);
 
