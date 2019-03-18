@@ -1,7 +1,5 @@
 import React from 'react';
-import geocode from '../data/geocode';
 import Input from './Input'
-import { lstat } from 'fs';
 
 class Geocode extends React.Component {
 
@@ -18,8 +16,8 @@ class Geocode extends React.Component {
                 return response.json();
             })
             .then(function (data) {
-            this.setState({lat :data.results[0].geometry.lat});
-            this.setState.lng = data.results[0].geometry.lng;
+            this.setState({lat: data.results[0].geometry.lat});
+            this.setState({lng: data.results[0].geometry.lng});
         });
   }
 
@@ -30,9 +28,9 @@ class Geocode extends React.Component {
             <div>
                 <Input/ >
                 <h3>Location Latitude</h3>
-                <p>Your latitude is {geocode.results[0].geometry.lat}</p>
+                <p>Your latitude is {lat}</p>
                 <h3>Location Longitude</h3>
-                <p>Your longitude is {geocode.results[0].geometry.lng}</p>
+                <p>Your longitude is {lng}</p>
             </div>
         )
     }
