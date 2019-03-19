@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 
 class Input extends Component {
-    state={
-    location:"",
-    lng:"",
-    lat:""        
-}
+    
 
 updateLocation = event=> {
   this.setState({location:event.target.value})
 }
+
 // Get coords from opencage
 onSubmitInput= (event)=> {
   event.preventDefault()
@@ -17,10 +14,10 @@ onSubmitInput= (event)=> {
       .then(function (response) {
           return response.json();
       })
-      .then(function (data) {
-          console.log(data);
-      });
+      this.setState({lat:this.results[0].geometry.lat})
+      this.setState({lng:this.results[0].geometry.lng})
 }
+
 render() {
   return (
     <form id="frm1" onSubmit={this.onSubmitInput}>

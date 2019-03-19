@@ -2,10 +2,21 @@ import React from 'react';
 import Input from './Input'
 
 class Geocode extends React.Component {
+  state={
+    lat: "",
+    lng: ""
+  }
 
-    state={
-        lng:"",
-        lat:"" 
+  updateLocation = event=> {
+      this.setState({location:event.target.value})
+    }
+    
+  updateLatitude = event => {
+      this.setState({lat:event.target.value})
+    }
+
+  updateLongitude = event => {
+      this.setState({lng:event.target.value}) 
     }
 
     // Get coords from opencage
@@ -15,10 +26,9 @@ class Geocode extends React.Component {
             .then(function (response) {
                 return response.json();
             })
-            .then(function (data) {
-            this.setState({lat: data.results[0].geometry.lat});
-            this.setState({lng: data.results[0].geometry.lng});
-        });
+          
+            //this.setState({lat:this.results[0].geometry.lat})
+            //this.setState({lng:this.results[0].geometry.lng})
   }
 
     
@@ -28,9 +38,9 @@ class Geocode extends React.Component {
             <div>
                 <Input/ >
                 <h3>Location Latitude</h3>
-                <p>Your latitude is {lat}</p>
+                <p>Your latitude is {this.lat}</p>
                 <h3>Location Longitude</h3>
-                <p>Your longitude is {lng}</p>
+                <p>Your longitude is {this.lng}</p>
             </div>
         )
     }

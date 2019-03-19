@@ -1,6 +1,4 @@
 import React from 'react';
-import sunrisesunset from '../data/sunrisesunset';
-
 import Input from './Input';
 
 class SunriseSunset extends React.Component {
@@ -13,7 +11,7 @@ class SunriseSunset extends React.Component {
               return response.json();
             })
             .then(function (data) {
-            this.setState({sunrise :data.results.sunrise});
+            this.setState({sunrise: data.results.sunrise});
             this.setState({sunset: data.results.sunset});
         });
     }
@@ -23,9 +21,9 @@ class SunriseSunset extends React.Component {
             <div>
                 <Input />
                 <h3>Location Sunrise</h3>
-                <p>Your Sunrise is projected for {sunrisesunset.results.sunrise}</p>
+                <p>Your Sunrise is projected for {this.sunrise}</p>
                 <h3>Location Sunset</h3>
-                <p>Your Sunset is projected for {sunrisesunset.results.sunset}</p>
+                <p>Your Sunset is projected for {this.sunset}</p>
             </div>
             ) 
         }
