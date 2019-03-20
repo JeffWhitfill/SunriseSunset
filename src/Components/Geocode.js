@@ -27,8 +27,8 @@ class Geocode extends React.Component {
                 return response.json();
             })
           
-            //this.setState({lat:this.results[0].geometry.lat})
-            //this.setState({lng:this.results[0].geometry.lng})
+            this.setState({lat:this.results[0].geometry.lat})
+            this.setState({lng:this.results[0].geometry.lng})
   }
 
     

@@ -22,8 +22,7 @@ class Weather extends React.Component {
         const Ktemp = this.city.list[0].main.temp;
         const Ftemp = ((Ktemp - 273.15) * (9/5) + 32).toFixed(0);
             
-            return (
-            
+            return (            
                 <div>
                     <Input />
                     <h3>Location Temperature</h3>
