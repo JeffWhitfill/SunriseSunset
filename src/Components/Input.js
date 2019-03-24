@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Input extends Component {
 
   state={
-    location: "Louisville, KY"
+    location: "Louisville"
   }
     
 
@@ -14,12 +14,8 @@ updateLocation = event=> {
 // Get coords from opencage
   onSubmitInput= (event)=> {
     event.preventDefault()
-  fetch(`https://api.opencagedata.com/geocode/v1/json?q=${this.state.location}&key=40b6726e5f0045a9bcc9c3aca3b2261e`)
-      .then(function (response) {
-          return response.json();
-      })
-      this.setState({lat:this.results[0].geometry.lat})
-      this.setState({lng:this.results[0].geometry.lng})
+ this.props.onSubmitInput(this.state.location)
+      
 }
 
 render() {
@@ -31,6 +27,7 @@ render() {
       </label>
       <input type="submit" value="Submit" />
     </form>
+
 );
 }}
 

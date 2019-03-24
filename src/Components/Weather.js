@@ -6,20 +6,21 @@ class Weather extends React.Component {
 
 
     //Get weather data at location
-    onSubmitInput= (event)=> {
-    event.preventDefault()
-    fetch(`api.openweathermap.org/data/2.5/forecast?lat=${this.state.lat}&lon=${this.state.lng}`)
-    .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-      this.setState({temperature: data.city.list[0].main.temp});
-      this.setState({humidity: data.city.list[0].main.humidity});
-      this.setState({windSpeed: data.city.list[0].wind.speed})
-  });
-}
+//    onSubmitInput= (event)=> {
+//    event.preventDefault()
+//    fetch(`api.openweathermap.org/data/2.5/forecast?lat=${this.state.lat}&lon=${this.state.lng}`)
+//    .then(function (response) {
+//        return response.json();
+//      })
+//      .then(function (data) {
+//      this.setState({temperature: data.city.list[0].main.temp});
+//      this.setState({humidity: data.city.list[0].main.humidity});
+//      this.setState({windSpeed: data.city.list[0].wind.speed})
+//  });
+//}
+
     render () {
-        const Ktemp = this.city.list[0].main.temp;
+        const Ktemp = this.temperature;
         const Ftemp = ((Ktemp - 273.15) * (9/5) + 32).toFixed(0);
             
             return (            

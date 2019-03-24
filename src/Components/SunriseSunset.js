@@ -4,17 +4,17 @@ import Input from './Input';
 class SunriseSunset extends React.Component {
 
 //Get sunrise-sunset.org times
-    onSubmitInput= (event)=> {
-    event.preventDefault()
-    fetch(`https://api.sunrise-sunset.org/json?lat=${this.state.lat}&lng=${this.state.lng}&date=today`)
-        .then(function (response) {
-              return response.json();
-            })
-            .then(function (data) {
-            this.setState({sunrise: data.results.sunrise});
-            this.setState({sunset: data.results.sunset});
-        });
-    }
+//    onSubmitInput= (event)=> {
+//    event.preventDefault()
+//    fetch(`https://api.sunrise-sunset.org/json?lat=${this.state.lat}&lng=${this.state.lng}&date=today`)
+//        .then(function (response) {
+//             return response.json();
+//            })
+//            .then(function (data) {
+//            this.setState({sunrise: data.results.sunrise});
+//            this.setState({sunset: data.results.sunset});
+//        });
+//    }
 
     render() {
         return (
