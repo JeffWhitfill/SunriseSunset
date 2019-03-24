@@ -60,8 +60,8 @@ class Geocode extends React.Component {
 
     render() {
         return (
-            <div>
-                <Input onSubmitInput={this.onSubmitInput}/ >
+            <div className="container">
+                <Input onSubmitInput={this.onSubmitInput} />
                 <h3>Location Latitude</h3>
                 <p>Your latitude is {this.state.lat}</p>
                 <h3>Location Longitude</h3>
