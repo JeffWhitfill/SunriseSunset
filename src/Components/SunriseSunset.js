@@ -37,11 +37,11 @@ class SunriseSunset extends React.Component {
         return (
             <div className="container">
                 <Input onSubmitInput={this.onSubmitInput} />
-                <h3>Location Sunrise</h3>
+                <h3 className="bg-warning">Location Sunrise</h3>
                 <p>Your Sunrise is projected for {this.state.sunrise} UTC</p>
-                <h3>Location Sunset</h3>
+                <h3 className="bg-warning">Location Sunset</h3>
                 <p>Your Sunset is projected for {this.state.sunset} UTC </p>
-                <h6>All times are in Coordinated Universal Time (UTC)</h6>
+                <h6 className="font-italic">All times are in Coordinated Universal Time (UTC)</h6>
             </div>
         )
     }

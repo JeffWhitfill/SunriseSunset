@@ -24,7 +24,7 @@ class Weather extends React.Component {
     }
 
   // Print calculated Ftemp, humidity and wind speed to screen
-  
+
     render() {
                     const Ktemp = this.state.temperature;
                     // convert temperature in Kelvin to Fahrenheit
@@ -33,11 +33,11 @@ class Weather extends React.Component {
                     return(            
                         <div className="container">
                                 <Input onSubmitInput={this.onSubmitInput} />
-                                <h3>Location Temperature</h3>
+                                <h3 className="bg-info text-white">Location Temperature</h3>
                                 <p>Your temperature is {Ftemp} F.</p>
-                                <h3>Location Humidity</h3>
+                                <h3 className="bg-info text-white">Location Humidity</h3>
                                 <p>Your humidity is {this.state.humidity}% .</p>
-                                <h3>Location Wind</h3>
+                                <h3 className="bg-info text-white">Location Wind</h3>
                                 <p>Your wind speed is {this.state.windSpeed} mph .</p>
                         </div >
             )

@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 
 class Input extends Component {
-
+// set initial state for location
   state={
     location: ""
   }
     
-
+// update the state with new location
 updateLocation = event=> {
   this.setState({location:event.target.value})
 }
 
-// Get coords from opencage
+// accept new location upon clicking submit button
   onSubmitInput= (event)=> {
     event.preventDefault()
  this.props.onSubmitInput(this.state.location)

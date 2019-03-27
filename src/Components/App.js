@@ -10,19 +10,16 @@ import SunriseSunset from './SunriseSunset';
 import Weather from './Weather';
 import Geocode from './Geocode';
 import Home from './Home';
-import Input from './Input';
 
 
 const App = () => (
     <BrowserRouter>
       <div className="container">
         <Header />
-        
         <Route exact path="/" component={Home} />
         <Route path="/SunriseSunset" component={SunriseSunset} />
         <Route path="/Weather" component={Weather} />
         <Route path="/Geocode" component={Geocode} />
-        <Route path="/Input" component={Input} />
       </div>
     </BrowserRouter>
 );
