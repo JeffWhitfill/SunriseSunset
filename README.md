@@ -5,6 +5,7 @@ This application can prove to be ideal in determining the viablity of any outdoo
 In the project directory, you can run:
 
 npm install --save react-router-dom
+
 npm start
 
 Runs the app in the development mode.
