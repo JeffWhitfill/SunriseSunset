@@ -2,11 +2,11 @@ This project app takes an input location and reveals its longitude and latitude 
 There is a navigation bar which will direct you to each of these pages.
 This application can prove to be ideal in determining the viablity of any outdoor activities that could be impacted by the presence of sunlight or weather conditions.
 
-In the project directory, you can run:
+In the sunrise-sunset directory, please run:
 
-npm install --save react-router-dom
+npm install
 
-npm start
+then npm start
 
 Runs the app in the development mode.
 Open http://localhost:3000 to view it in the browser.
