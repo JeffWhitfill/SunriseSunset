@@ -32,6 +32,7 @@ class Weather extends React.Component {
 
                     return(            
                         <div className="container">
+                          <h1 className="jumbotron text-center text-info">Weather Information</h1>
                                 <Input onSubmitInput={this.onSubmitInput} />
                                 <h3 className="bg-info text-white">Location Temperature</h3>
                                 <p>Your temperature is {Ftemp} F.</p>

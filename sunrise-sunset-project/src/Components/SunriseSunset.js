@@ -36,6 +36,7 @@ class SunriseSunset extends React.Component {
     render() {
         return (
             <div className="container">
+                <h1 className="jumbotron text-center text-warning">Times for Sunrise and Sunset</h1>
                 <Input onSubmitInput={this.onSubmitInput} />
                 <h3 className="bg-warning">Location Sunrise</h3>
                 <p>Your Sunrise is projected for {this.state.sunrise} UTC</p>

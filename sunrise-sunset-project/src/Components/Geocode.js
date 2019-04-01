@@ -27,6 +27,7 @@ class Geocode extends React.Component {
     render() {
         return (
             <div className="container">
+              <h1 className="jumbotron text-center text-info">Geographic Coordinates</h1>
                 <Input onSubmitInput={this.onSubmitInput} />
                 <h3 className="bg-info text-white">Location Latitude</h3>
                 <p>Your latitude is {this.state.lat} .</p>
